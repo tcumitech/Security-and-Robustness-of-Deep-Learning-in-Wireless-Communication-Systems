@@ -1,0 +1,20 @@
+{
+    "name": "Wireless Communication Security",
+    "image": "mcr.microsoft.com/devcontainers/python:3.8", 
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.8"
+        },
+        "ghcr.io/devcontainers/features/jupyterlab:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "vscode"
+}
