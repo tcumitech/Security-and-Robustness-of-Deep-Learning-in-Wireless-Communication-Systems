@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.6'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install tensorflow==1.7.0
+
+    - name: Run your script
+      run: |
+        python your_script.py  # Thay thế 'your_script.py' bằng tên file Python của bạn
